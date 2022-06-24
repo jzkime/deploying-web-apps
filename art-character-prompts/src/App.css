@@ -1,4 +1,67 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 .App {
   text-align: center;
 }
 
+button {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #916eb1;
+  color: #fae0ed;
+}
+
+button:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+  color: #916eb1;
+  background-color: #fae0ed;
+}
+
+button:disabled {
+  cursor: auto;
+  opacity: 0.5;
+  transform: none;
+  background-color: #916eb1;
+  color: #fae0ed;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #855eab;
+  color: #FFFFFF;
+  height: 20vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0
+
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.contents {
+  margin-top: 20vh;
+  display: flex;
+}
+
+.create-chara, .generate-buttons {
+  background-color: #fae0ed;
+  padding: 2%;
+  width: 50vw;
+  height: 80vh;
+}
+
+.generate-buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}

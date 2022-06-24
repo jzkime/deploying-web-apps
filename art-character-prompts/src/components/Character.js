@@ -1,9 +1,10 @@
 const Character = ({type, species, secondSpec}) => {
     return(
-    <div>
-        {type && <h3>Type: {type}</h3>}
-        {species && <h3>Species: {species} {secondSpec && `+ ${secondSpec}` } </h3>}
-    </div>
+    <section className="create-chara">
+        <h2> {!type ? 'click on the button to start generating!' : 'Your character...'}</h2>
+        {type && <p>Type: {type}</p>}
+        {species && <p>Species: {species} {secondSpec && `+ ${secondSpec}` } </p>}
+    </section>
     )
 }
 

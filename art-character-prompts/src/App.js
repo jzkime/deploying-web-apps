@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react';
 
 import { characterSpecies, characterTypes } from './data'
 import Character from './components/Character';
+import Header from './components/Header'
 
+let char;
 function App() {
   const [ type, setType ] = useState(null)
   const [ species, setSpecies ] = useState(null)
@@ -11,27 +13,29 @@ function App() {
   const [ isHybrid, setIsHybrid ] = useState(false)
 
   const ranNum = (num) => {
-    return Math.round(Math.random() * num)
+    char = Math.round(Math.random() * num)
+    return char;
   }
   const handleType = (typeL) => {
     setType(characterTypes[ranNum(typeL)])
   }
 
   const ver = () => {
-    if(type === 'humanoid' || 'robot') return 'humanoid_robot';
-    if(type === 'beast') return type
-    if(type === 'hybrid') return type
+    if(type === 'humanoid' || type === 'robot') return 'humanoid_robot';
+    if(type === 'beast') return type;
+    if(type === 'hybrid') return 'hybrid()';
   }
 
   const handleSpecies = () => {
-    const v = ver()
-    setSpecies(characterSpecies[v][ranNum(characterSpecies[v].length-1)])
+    const v = ver();
+    type === 'hybrid' ? 
+    setSpecies(characterSpecies["hybrid"]()[ranNum(characterSpecies["hybrid"]().length-1)])
+    :
+    setSpecies(characterSpecies[v][ranNum(characterSpecies[v].length)])
   }
 
   const handleSecSpec = () => {
-    const v = ver()
-    let othSpec = characterSpecies[v][ranNum(characterSpecies[v].length-1)]
-    // if(species === othSpec) 
+    let othSpec = characterSpecies["hybrid"]()[ranNum(characterSpecies["hybrid"]().length-1)]
     setSecondSpec(othSpec)
   }
 
@@ -39,13 +43,19 @@ function App() {
     if(type==='hybrid') setIsHybrid(true);
   }, [type])
 
+  console.log(species)
   return (
     <div className="App">
-        <h1>Random Character Generator!</h1>
-        <Character type={type} species={species} secondSpec={secondSpec}/>
-        {!type && <button onClick={() => handleType(characterTypes.length-1)}>randomly generate type!</button>}
-        {(type && !species) && <button onClick={handleSpecies}>randomly generate species!</button>}
-        {(isHybrid && !secondSpec) && <button onClick={handleSecSpec}>generate other half of species!</button>}
+        <Header />
+      <section className='contents'>
+          <Character type={type} species={species} secondSpec={secondSpec}/>
+
+          <div className='generate-buttons'>
+            <button disabled={type} onClick={() => handleType(characterTypes.length-1)}>randomly generate type!</button>
+            {type && <button disabled={species} onClick={handleSpecies}>randomly generate species!</button>}
+            {isHybrid && <button disabled={secondSpec} onClick={handleSecSpec}>generate other half of species!</button>}
+          </div>
+        </section>
     </div>
   );
 }
