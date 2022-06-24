@@ -36,12 +36,10 @@ header {
   align-items: center;
   background-color: #855eab;
   color: #FFFFFF;
-  height: 20vh;
+  height: 15vh;
   position: fixed;
+  width: 100%;
   top: 0;
-  right: 0;
-  left: 0
-
 }
 
 h2 {
@@ -49,7 +47,7 @@ h2 {
 }
 
 .contents {
-  margin-top: 20vh;
+  margin-top: 15vh;
   display: flex;
 }
 
@@ -57,7 +55,7 @@ h2 {
   background-color: #fae0ed;
   padding: 2%;
   width: 50vw;
-  height: 80vh;
+  height: 85vh;
 }
 
 .generate-buttons {
