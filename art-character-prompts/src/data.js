@@ -10,7 +10,7 @@ export const characterSpecies = {
         'human',
         'vampire',
         'faerie',
-        'elf',
+        'elf', 'forest elf', 'dark elf', 'high elf', 'light elf',
         'dwarf',
         'giant',
         'cyclops',
@@ -20,19 +20,26 @@ export const characterSpecies = {
         'skeleton'
     ],
     beast: [
-        'canine',
-        'feline',
-        'reptile',
-        'amphibian',
-        'aves(bird)',
+        '?',
+        'dog','wolf',
+        'cat', 'panther', 'lion',
+        'snake', 'lizard', 'turtle', 'chameleon',
+        'frog', 'toad',
+        'bird',
         'insect',
         'fish',
         'horse',
         'phoenix',
         'unicorn',
-        'dragon'
+        'dragon', 'fire dragon', 'water dragon', 'wind dragon', 'earth dragon',
+        'Tyrannosaurus', 'spinosaurus', 'velociraptor', 'brachiosaurus', 'dilophosaurus',
     ],
     hybrid: () => [...characterSpecies.humanoid_robot, ...characterSpecies.beast]
 }
 
-export const additionalCharacteristics = ['ghost']
+
+export const additionalCharacteristics = ['ghost', 'god'];
+
+export const elements = ['fire', 'wind', 'earth', 'fire'];
+
+export const emotions = ['happy', 'angry', 'sad', 'scared', 'judgmental', 'devastated', 'ecstatic', 'relaxed', 'shy', 'embarressed']
