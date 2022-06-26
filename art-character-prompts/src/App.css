@@ -10,40 +10,52 @@ p {
   font-weight: 500;
 }
 
+body {
+  background-image: url('../public/forest-lantern-pexels.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #fae0ed;
+}
+
 .App {
   text-align: center;
 }
 
 button {
   padding: 5px;
-  border-radius: 20px;
-  background-color: #916eb1;
-  color: #fae0ed;
+  border-radius: 10px;
+  background-color: #444868;
+  color: #ffffff;
   width: 30%;
 }
 
 button:hover {
   cursor: pointer;
-  color: #916eb1;
-  background-color: #fae0ed;
+  color: #444868;
+  background-color: rgb(255, 162, 0);
 }
 
 button:disabled {
   cursor: auto;
   opacity: 0.5;
   background-color: #916eb1;
-  color: #fae0ed;
+  color: #444868;
+}
+
+header img {
+  height: 80%
 }
 
 header {
   display: flex;
   align-items: center;
-  background-color: #855eab;
+  background-color: #444868;
   color: #FFFFFF;
   height: 15vh;
   position: fixed;
   width: 100%;
   top: 0;
+  border-bottom: 3px solid rgb(255, 162, 0);
 }
 
 h2 {
@@ -51,12 +63,15 @@ h2 {
 }
 
 .contents {
-  background-color: #fae0ed;
-  margin-top: 15vh;
+  background-color: #e6e0fa;
+  margin-top: 30vh;
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  height: 85vh;
+  height: 60vh;
+  width: 80%;
+  border-radius: 10px;
+  border: 5px solid #444868;
 }
 
 .create-chara, .generate-buttons {
@@ -67,7 +82,7 @@ h2 {
 }
 
 .main-content, .additional-content {
-  height: 30%;
+  height: 35%;
 }
 
 .main-content {
@@ -80,9 +95,11 @@ h2 {
   row-gap: 20px;
 }
 
-.content-bottom {
+.content-restart {
+  border-top: 5px groove #444868;
+  padding: 1%;
   width: 100%;
-  height: 10%;
+  height: 20%;
 }
 
 .additional-content {
@@ -102,6 +119,5 @@ h2 {
 }
 
 .additional-left button {
-  width: 40%;
+  width: 80%;
 }
-
