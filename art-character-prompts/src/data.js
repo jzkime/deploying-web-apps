@@ -61,7 +61,7 @@ export const characterSpecies = {
         'phoenix',
         'unicorn',
         'dragon', 'fire dragon', 'water dragon', 'wind dragon', 'earth dragon',
-        'tyrannosaurus rex', 'spinosaurus', 'velociraptor', 'brachiosaurus', 'dilophosaurus',
+        't-rex', 'velociraptor', 'brachiosaurus'
     ]
 }
 export const hybrid = [...characterSpecies.humanoid_robot.map(ch => ch.name), ...characterSpecies.creature]
@@ -97,45 +97,45 @@ export const elements = ['fire', 'wind', 'earth', 'fire', 'blood', 'dark', 'ligh
 
 export const emotions = ['happy', 'angry', 'sad', 'scared', 'judgmental', 'devastated', 'ecstatic', 'relaxed', 'shy', 'embarressed']
 
-export const back = ['butterfly wings', 'angel wings', 'demon wings', 'tail', 'dragon wings']
-export const adj = ['burnt', 'torn', 'half missing', 'short', 'long', 'deranged', 'soft', 'bony'];
-export const head = ['horns']
-export const ears = ['pointy', 'pierced', 'basic']
-export const where = ['face', 'chest', 'calf', 'thigh', 'bicep', 'forearm', 'none'];
-//if 'none' = return;
-export const what = ['scar', 'tattoo', ]
+export const backData = ['butterfly wings', 'angel wings', 'demon wings', 'tail', 'dragon wings']
+export const adjData = ['burnt', 'torn', 'half missing', 'short', 'long', 'deranged', 'soft', 'bony'];
+export const headData= ['horns', 'halo', 'none']
+export const earsData = ['pointy', 'pierced', 'basic']
+export const whereData = ['face', 'chest', 'calf', 'thigh', 'bicep', 'forearm', 'none'];
+export const whatData = ['scar', 'tattoo', ]
 
-export const clothes = {
+export const clothesData = {
     back: ['cape', 'cloak', 'backpack', 'crop top jacket'],
     top: ['t-shirt', 'turtleneck', 'hoodie', 'crop top', 'spagetti straps', 'dress', 'brand t-shirt', 'blouse', 'sweater', 'belted top', 'button down', 'tank top', 'cold shoulder top', 'vest', 'button down and tie', 'off the shoulder'],
     bottom: ['jeans', 'leggings', 'tights', 'shorts', 'skirt']
 }
 
-export const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'magenta', 'brown', 'teal', 'pink', 'violet', 'grey', 'white', 'black'];
+export const colorsData = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'magenta', 'brown', 'teal', 'pink', 'violet', 'grey', 'white', 'black', 'olive', 'brown', 'tan'];
+export const colorsBase = ['brown', 'tan', 'olive', 'pale', 'white', 'black']
 
-export const gender = ['female', 'male', 'non-binary', 'gender-fluid']
+export const genderData = ['female', 'male', 'non-binary', 'gender-fluid']
 
 export const basedOn = {
-    color: ['the item closest to you', 'your favorite item', 'your favorite color', `your favorite person's favorite color`, `favorite character's main theme color`, `the last show you watched's, least favorite character's main theme color`],
+    colorBased: ['the item closest to you', 'your favorite item', 'your favorite color', `your favorite person's favorite color`, `favorite character's main color`, `least favorite character's main color`],
     personal: [
-        'have siblings or only child', 
+        'have siblings', 
         'have long hair or short short', 
-        'wearing long sleeves or short sleeves', 
-        `have read a book in the last month or haven't read a book in over a month`, 
-        `believe in paranormal or non paranormal believer`,
+        'currently wearing long sleeves or short sleeves', 
+        `have read a book in the last month`, 
+        `believe in paranormal`,
         `cat person or dog person`,
         `have a pet(s) or no pets`,
-        `indoors or outdoors`,
+        `prefer indoors or outdoors`,
         `introverted or extraverted`,
         `have allergies or allergy free`,
-        `yes <- like anime? no ->`,
-        `yes <- like kpop? no ->`,
-        `yes <- like sci-fi? no ->`,
-        `yes <- like videogames? no ->`,
-        `yes <- like running? no ->`,
-        `yes <- go to the gym? no ->`,
-        `yes <- been out of the country? no ->`,
-        `yes <- watched a show/movie today? no ->`,
+        `like anime?`,
+        `like kpop?`,
+        `like sci-fi?`,
+        `like videogames?`,
+        `like running?`,
+        `go to the gym?`,
+        `been out of the country?`,
+        `watched a show/movie today?`,
         ]
 }
 
