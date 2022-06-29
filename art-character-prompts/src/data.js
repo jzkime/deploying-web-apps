@@ -133,7 +133,7 @@ export const basedOn = {
         `like sci-fi?`,
         `like videogames?`,
         `like running?`,
-        `go to the gym?`,
+        `do you go to the gym?`,
         `been out of the country?`,
         `watched a show/movie today?`,
         ]

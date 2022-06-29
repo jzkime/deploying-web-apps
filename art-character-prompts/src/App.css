@@ -52,6 +52,7 @@ header {
   background-color: #444868;
   color: #FFFFFF;
   position: fixed;
+  z-index: 1;
   width: 100%;
   padding: 1%;
   top: 0;
@@ -82,7 +83,7 @@ h2 {
 
 .contents {
   background-color: #e6e0fa;
-  margin-top: 33vh;
+  margin-top: 35vh;
   margin-bottom: 5vh;
   display: flex;
   justify-content: center;
@@ -203,12 +204,15 @@ h2 {
 
 @media (max-width: 800px) {
     .contents {
-      margin-top: 55vh;
+      margin-top: 50vh;
     }
 }
 
 @media (max-width: 500px) {
   .contents {
     margin-top: 60vh;
+  }
+  header img {
+    width: 8rem;
   }
 }

@@ -78,6 +78,7 @@ function App() {
  
   const ranNum = (num) => {
     let number = Math.round(Math.random() * num)
+    number !== char ? char = number : number = Math.round(Math.random() * num);
     number !== char ? char = number : char = Math.round(Math.random() * num);
     return char;
   }
