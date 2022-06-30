@@ -8,6 +8,12 @@
 
 p {
   font-weight: 500;
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  padding: 1%;
 }
 
 body {
@@ -29,6 +35,7 @@ button {
   color: #ffffff;
   width: 50%;
   max-height: 50px;
+  font-size: 0.9rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
@@ -64,10 +71,6 @@ header {
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-h1 {
-  padding: 1%;
-}
-
 header img {
   max-width: 10rem;
 }
@@ -91,9 +94,13 @@ h2 {
   flex-wrap: wrap;
   row-gap: 20px;
   width: 80%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 13px 5px -18px inset;
 }
 
+.main-content, .additional-content, .content-restart {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #e6e0fa;
+  border-radius: 10px;
+}
 .create-chara, .generate-buttons {
   width: 50vw;
   display: flex;
@@ -104,8 +111,6 @@ h2 {
 .main-content {
   display: flex;
   padding: 1%;
-  background-color: #e6e0fa;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .generate-buttons {
@@ -124,8 +129,6 @@ h2 {
   align-content: center;
   flex-wrap: wrap;
   row-gap: 10px;
-  background-color: #e6e0fa;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .content-restart button {
@@ -138,8 +141,6 @@ h2 {
   height: 60%;
   width: 100%;
   row-gap: 20px;
-  background-color: #e6e0fa;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .additional-content h3 {
@@ -214,17 +215,46 @@ h2 {
   width: 40vw;
 }
 
-@media (max-width: 800px) {
-    .contents {
-      margin-top: 50vh;
-    }
+@media (max-width: 900px) {
+  h1 { 
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  header img {
+    width: 7rem;
+  }
+
+  header div {
+    max-width: 100%;
+  }
+
+  .contents {
+    margin-top: 35vh;
+  }
 }
 
 @media (max-width: 500px) {
+  button {
+    font-size: 0.8rem;
+  }
+  h1 { 
+    font-size: 1.4rem;}
+  p {
+    font-size: 1rem;
+  }
   .contents {
-    margin-top: 60vh;
+    margin-top: 40vh;
   }
   header img {
-    width: 8rem;
+    width: 7rem;
   }
+
+  header div {
+    max-width: 100%;
+  }
+
 }
