@@ -1,5 +1,7 @@
+import { connect } from "react-redux";
+
 const Character = ({character}) => {
-    const {type, species, gender, secondSpecies} = character;
+    const { type, species, gender, secondSpecies } = character;
     return(
     <section className="create-chara">
         <h2> {!type ? 'click on the button to start generating!' : 'Your character is...'}</h2>
@@ -10,4 +12,4 @@ const Character = ({character}) => {
     )
 }
 
-export default Character;
+export default connect(st => st)(Character);

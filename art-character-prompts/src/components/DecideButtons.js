@@ -1,24 +1,14 @@
-import { backData, adjData, headData, colorsData, colorsBase } from "../data";
-import { useState, useEffect } from "react";
+import { backData, headData, colorsData, colorsBase } from "../data";
+import { connect } from "react-redux";
+import * as act from '../reducer/actionDecide'
 
-const initialMore = {backMore: false, skinMore: false}
-
-const DecideButtons = ({ setDecideDesign, decideDesign, ranNum }) => {
-    const [ more, setMore ] = useState(initialMore)
+const DecideButtons = ({ decideDesign, changeDec, decBack, more, addAdj }) => {
     const { back, head, eyeColor, skinColor, themeColor1, themeColor2 } = decideDesign;
     const { skinMore, backMore } = more;
 
-    const changeDec = (what, whatData) => {
-        setDecideDesign({...decideDesign, [what]: whatData[ranNum(whatData.length-1)]})
-    }
-
-    const addAdj = (e) => {
-        setMore({...more, [e.target.name]: e.target.checked})
-    }
-
     const handleBack = () => {
         backMore ? 
-        setDecideDesign({...decideDesign, back: `${adjData[ranNum(adjData.length-1)]} ${backData[ranNum(backData.length-1)]}`})
+        decBack()
         :
         changeDec('back', backData)
     }
@@ -30,16 +20,12 @@ const DecideButtons = ({ setDecideDesign, decideDesign, ranNum }) => {
         changeDec('skinColor', colorsBase)
     }
 
-    useEffect(() => {
-        setMore(initialMore)
-    }, [])
-
     return(
         <div className='additional-left'>
           <div className="button-check"> 
             <button disabled={back} onClick={handleBack}>generate back</button> 
             <label> adj? </label> 
-            <input disabled={back} type='checkbox' name='backMore' onChange={addAdj} /> 
+            <input disabled={back} type='checkbox' name='backMore' onChange={addAdj} checked={backMore} /> 
           </div>
         
         <button disabled={head} onClick={() => changeDec('head', headData)}>generate head acc</button> 
@@ -48,7 +34,7 @@ const DecideButtons = ({ setDecideDesign, decideDesign, ranNum }) => {
           <div className='button-check'> 
             <button disabled={skinColor} onClick={handleSkinType} name='skinColor' >skin color</button>
             <label >all colors?</label>
-            <input type='checkbox' name='skinMore' onChange={addAdj} disabled={skinColor} />
+            <input type='checkbox' name='skinMore' onChange={addAdj} disabled={skinColor} checked={skinMore} />
           </div>
             <button disabled={themeColor1} onClick={() => changeDec('themeColor1', colorsData)}>theme color(1)</button>
             <button disabled={themeColor2} onClick={() => changeDec('themeColor2', colorsData)}>theme color(2)</button>
@@ -56,4 +42,4 @@ const DecideButtons = ({ setDecideDesign, decideDesign, ranNum }) => {
     )
 }
 
-export default DecideButtons;
+export default connect(st => st, act)(DecideButtons);

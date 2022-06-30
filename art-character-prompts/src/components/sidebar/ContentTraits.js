@@ -1,3 +1,5 @@
+import { connect } from "react-redux";
+
 const ContentTraits = ({ moreTraits }) => {
     const { emotion, element, additional } = moreTraits;
     return(
@@ -9,4 +11,4 @@ const ContentTraits = ({ moreTraits }) => {
     )
 }
 
-export default ContentTraits;
+export default connect(st => st)(ContentTraits);

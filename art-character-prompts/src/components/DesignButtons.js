@@ -1,44 +1,10 @@
-import { basedOn, clothesData, backData, headData, } from '../data'
-const { personal, colorBased } = basedOn;
-const {top, bottom} = clothesData;
+import * as actions from '../reducer/actionDesign'
+import { connect } from 'react-redux';
 
-const DesignButtons = ({setDesign, designs, ranNum}) => {
+const DesignButtons = (props) => {
+    const {designs,
+    handleBack, handleEye, handleHead, handleTop, handleBottom, handleSkinColor} = props
     const { backQues, eyeColorQues, headQues, clothesQuesTop, clothesQuesBottom, skinColorQues } = designs
-
-    const handleBack = () => {
-        setDesign({...designs, back1: backData[ranNum(backData.length-1)], 
-        back2: backData[ranNum(backData.length-1)],
-        backQues: personal[ranNum(personal.length-1)]})
-    }
-    const handleEye = () => {
-        setDesign({...designs, eyeColorQues: colorBased[ranNum(colorBased.length-1)]})
-    }
-    const handleHead = () => {
-        setDesign({...designs, 
-        head1: headData[ranNum(headData.length-1)],
-        head2: headData[ranNum(headData.length-1)],
-        headQues: personal[ranNum(personal.length-1)]
-    })
-    }
-    const handleTop = () => {
-        setDesign({...designs,
-        clothesTop1: top[ranNum(top.length-1)],
-        clothesTop2: top[ranNum(top.length-1)],
-        clothesQuesTop: personal[ranNum(personal.length-1)]
-        })
-    }
-    const handleBottom = () => {
-        setDesign({...designs,
-        clothesBottom1: bottom[ranNum(bottom.length-1)],
-        clothesBottom2: bottom[ranNum(bottom.length-1)],
-        clothesQuesBottom: personal[ranNum(personal.length-1)]
-        })
-    }
-    const handleSkinColor = () => {
-        setDesign({...designs,
-            skinColorQues: colorBased[ranNum(colorBased.length-1)]
-        })
-    }
 
     return (
         <div className='additional-right'>
@@ -52,4 +18,4 @@ const DesignButtons = ({setDesign, designs, ranNum}) => {
     )
 }
 
-export default DesignButtons;
+export default connect(st => st, actions)(DesignButtons);

@@ -1,3 +1,4 @@
+import { connect } from "react-redux";
 const Design = ({designs}) => {
     const { 
         back1, back2, backQues,
@@ -89,4 +90,4 @@ const Design = ({designs}) => {
     )
 }
 
-export default Design;
+export default connect(st => st)(Design);

@@ -1,5 +1,6 @@
+import { connect } from "react-redux";
 const Decide = ({ decideDesign }) => {
-    const { back, head, eyeColor, additional, skinColor, clothesType, themeColor1, themeColor2} = decideDesign;
+    const { back, head, eyeColor, skinColor, clothesType, themeColor1, themeColor2} = decideDesign;
 
     return(
         <div className='additional-right'>
@@ -14,4 +15,4 @@ const Decide = ({ decideDesign }) => {
     )
 }
 
-export default Decide;
+export default connect(st => st)(Decide);

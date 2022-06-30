@@ -49,22 +49,47 @@ export const characterSpecies = {
         {name: 'skeleton', googleUrl: '', description: ``, descUrl: ['']}
     ],
     creature: [
-        '?',
-        'dog','wolf',
-        'cat', 'panther', 'lion',
-        'snake', 'lizard', 'turtle', 'chameleon',
-        'frog', 'toad',
-        'bird',
-        'insect',
-        'fish',
-        'horse',
-        'phoenix',
-        'unicorn',
-        'dragon', 'fire dragon', 'water dragon', 'wind dragon', 'earth dragon',
-        't-rex', 'velociraptor', 'brachiosaurus'
+        {name: 'dog', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'wolf', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'cat', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'panther', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'lion', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'snake', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'lizard', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'turtle', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'chameleon', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'frog', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'toad', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'bird', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'insect', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'fish', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'horse', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'phoenix', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'unicorn', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'dragon', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'water dragon', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'wind dragon', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'earth dragon', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'fire dragon', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 't-rex', googleUrl: '', description: ``, descUrl: ['']},
+        {name: 'velociraptor', googleUrl: '', description: ``, descUrl: ['']},
+        {name: '?', googleUrl: '', description: ``, descUrl: ['']}
+        // '?',
+        // 'dog','wolf',
+        // 'cat', 'panther', 'lion',
+        // 'snake', 'lizard', 'turtle', 'chameleon',
+        // 'frog', 'toad',
+        // 'bird',
+        // 'insect',
+        // 'fish',
+        // 'horse',
+        // 'phoenix',
+        // 'unicorn',
+        // 'dragon', 'fire dragon', 'water dragon', 'wind dragon', 'earth dragon',
+        // 't-rex', 'velociraptor', 'brachiosaurus'
     ]
 }
-export const hybrid = [...characterSpecies.humanoid_robot.map(ch => ch.name), ...characterSpecies.creature]
+export const hybrid = [...characterSpecies.humanoid_robot.map(ch => ch.name), ...characterSpecies.creature.map(ch => ch.name)]
 
 export const characterMore = [
     {name: 'human', googleUrl: '', description: ``, descUrl: ['']},
