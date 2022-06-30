@@ -12,7 +12,7 @@ const DesignButtons = (props) => {
             <button disabled={eyeColorQues} onClick={handleEye}>eye color</button>
             <button disabled={headQues} onClick={handleHead}>head design</button>
             <button disabled={clothesQuesTop} onClick={handleTop}>clothes: top</button>
-            <button disabled={clothesQuesBottom} onClick={handleBottom}>clothes: bottom</button>
+            <button disabled={clothesQuesBottom} onClick={handleBottom}>clothes: bottoms</button>
             <button disabled={skinColorQues} onClick={handleSkinColor}>skin color</button>
         </div>
     )

@@ -72,7 +72,7 @@ const Design = ({designs}) => {
                     <p>{clothesBottom1}</p>
                 </div>
                 <div className="quesMid">
-                    <h4>clothes type: bottom</h4>
+                    <h4>clothes type: bottoms</h4>
                     <p>{clothesQuesBottom}</p>
                 </div>
                 <div className="quesRight">

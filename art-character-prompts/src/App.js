@@ -23,29 +23,11 @@ function App(props) {
   const [ wantMore, setWantMore ] = useState(initialWant);
   const { traitWant, designWant, decideWant } = wantMore;
 
-  const [ decideDesign, setDecideDesign ] = useState(initialDecided)
   const [ references, setReferences ] = useState(initialRef)
- 
-  const ranNum = (num) => {
-    let number = Math.round(Math.random() * num)
-    if(number !== char) {
-      return char = number
-     } else { 
-      number = Math.round(Math.random() * num)
-    }
-    if(number !== char) return char = number
-    if(number === char) number = Math.round(Math.random() * num)
-
-    return char;
-  }
 
   useEffect(() => {
     if(type==='hybrid' && !secondSpecies) handleHybrid(true);
   }, [type])
-
-  const handleReset = () => {
-    resetAll()
-  }
 
   const handleMore = (e, tab) => {
     setWantMore({...initialWant, [e.target.name]: !tab})
@@ -60,7 +42,7 @@ function App(props) {
 
         <div className={`content-restart`}>
           <button className={traitWant ? 'active-button' : ''} onClick={(e) => handleMore(e, traitWant)} name='traitWant'>{traitWant ? 'hide' : 'show more'} traits</button>
-          <button onClick={handleReset}>restart</button>
+          <button onClick={resetAll}>restart</button>
           <button className={designWant ? 'active-button' : ''} onClick={(e) => handleMore(e, designWant)} name='designWant'>{designWant ? 'hide' : 'show'} design</button>
           <button className={decideWant ? 'active-button' : ''} onClick={(e) => handleMore(e, decideWant)} name='decideWant'>decide designs for me</button>
         </div>
@@ -76,7 +58,7 @@ function App(props) {
         </div>
 
         <div className={`additional-content ${decideWant ? 'active' : ''}`}>
-          <DecideButtons decideDesign={decideDesign} setDecideDesign={setDecideDesign} ranNum={ranNum} />
+          <DecideButtons />
           <Decide  />
         </div>
       </section>

@@ -6,6 +6,10 @@ export const characterTypes = [
 ]
 // {name: '', googleUrl: '', description: ``, descUrl: ['']},
 
+/**
+ * for future: array of colors and hexs <script src="https://gist.github.com/mucar/3898821.js"></script>
+ */
+
 export const characterSpecies = {
     // humanoid_robot: [
     //     'human',
@@ -141,7 +145,7 @@ export const colorsBase = ['brown', 'tan', 'olive', 'pale', 'white', 'black']
 export const genderData = ['female', 'male', 'non-binary', 'gender-fluid']
 
 export const basedOn = {
-    colorBased: ['the item closest to you', 'your favorite item', 'your favorite color', `your favorite person's favorite color`, `favorite character's main color`, `least favorite character's main color`],
+    colorBased: ['the item closest to you', `your favorite item's color'`, 'your favorite color', `your second favorite color`, `your favorite person's favorite color`, `favorite character's main color`, `least favorite color`],
     personal: [
         'have siblings', 
         'have long hair or short short', 
