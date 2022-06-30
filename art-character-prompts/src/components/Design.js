@@ -1,3 +1,4 @@
+import { connect } from "react-redux";
 const Design = ({designs}) => {
     const { 
         back1, back2, backQues,
@@ -71,7 +72,7 @@ const Design = ({designs}) => {
                     <p>{clothesBottom1}</p>
                 </div>
                 <div className="quesMid">
-                    <h4>clothes type: bottom</h4>
+                    <h4>clothes type: bottoms</h4>
                     <p>{clothesQuesBottom}</p>
                 </div>
                 <div className="quesRight">
@@ -89,4 +90,4 @@ const Design = ({designs}) => {
     )
 }
 
-export default Design;
+export default connect(st => st)(Design);
