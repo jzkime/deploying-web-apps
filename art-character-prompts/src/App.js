@@ -5,7 +5,7 @@ import Design from './components/Design'
 import DesignButtons from './components/DesignButtons'
 import Decide from './components/Decide'
 import DecideButtons from './components/DecideButtons'
-import { initialWant, initialDesigns, initialDecided, initialRef } from './reducer/initial'
+import { initialWant, initialRef } from './reducer/initial'
 import SideTraits from './components/sidebar/SideTraits'
 import ContentTraits from './components/sidebar/ContentTraits'
 import TopContent from './components/topContent/TopContent';

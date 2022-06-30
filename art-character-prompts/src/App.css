@@ -16,12 +16,17 @@ h1 {
   padding: 1%;
 }
 
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
 body {
   background-image: url('../public/forest-lantern-pexels.webp');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-color: #fae0ed;
+  background-color: #822faf;
 }
 
 .App {
@@ -30,18 +35,22 @@ body {
 
 button {
   padding: 5px;
-  border-radius: 10px;
-  background-color: #3f339a;
+  background-color: #ef4f4f;
   color: #ffffff;
   width: 50%;
-  max-height: 50px;
+  max-height: 70px;
   font-size: 0.9rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: none;
+  border-bottom: 0.5px solid #1b1422
+}
+
+button:last-of-type {
+  border-bottom: none;
 }
 
 button:hover {
   cursor: pointer;
-  color: #3f339a;
+  color: #2a074a;
   background-color: rgb(255, 162, 0);
 }
 
@@ -49,7 +58,8 @@ button:disabled {
   cursor: auto;
   opacity: 0.5;
   background-color: #916eb1;
-  color: #3f339a;
+  color: #2a074a;
+  border-bottom: none;
 }
 
 .active-button {
@@ -57,7 +67,7 @@ button:disabled {
 }
 
 header {
-  background-color: #3f339a;
+  background-color: #2a074a;
   color: #FFFFFF;
   position: fixed;
   z-index: 1;
@@ -82,10 +92,6 @@ header div p {
   max-width: 70%;
 }
 
-h2 {
-  margin-bottom: 20px;
-}
-
 .contents {
   margin-top: 32vh;
   margin-bottom: 5vh;
@@ -93,15 +99,14 @@ h2 {
   justify-content: center;
   flex-wrap: wrap;
   row-gap: 20px;
-  width: 80%;
 }
 
 .main-content, .additional-content, .content-restart {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(95, 63, 41, 0.3) 0px 18px 36px -18px inset;
-  background-color: #e6e0fa;
-  border-radius: 10px;
-  padding: 2%;
+  background-color: #f6e7ff;
+  width: 100%;
+
 }
+
 .create-chara, .generate-buttons {
   width: 50vw;
   display: flex;
@@ -111,29 +116,27 @@ h2 {
 
 .main-content {
   display: flex;
-  padding: 1%;
+  padding: 2%;
 }
 
 .generate-buttons {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 20px;
 }
 
 .content-restart {
-  border-top: 3px groove #3f339a;
-  border-bottom: 3px groove #3f339a;
-  padding: 1%;
   width: 100%;
-  height: 20%;
   display:flex;
   align-content: center;
   flex-wrap: wrap;
-  row-gap: 10px;
+  height: 50%;
 }
 
 .content-restart button {
-  width: 45%;
+  width: 50%;
+}
+.content-restart button:nth-child(3) {
+  border-bottom: none;
 }
 
 .additional-content {
@@ -160,7 +163,6 @@ h2 {
   width: 65vh;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
   padding: 1%;
 }
 
@@ -174,7 +176,7 @@ h2 {
 
 .additional-left>p {
   padding-bottom: 1%;
-  border-bottom: 5px solid #3f339a;
+  border-bottom: 5px solid #2a074a;
 }
 
 .decide-Col {
@@ -193,7 +195,7 @@ h2 {
 }
 
 .button-check button {
-  width: none;
+  width: fill;
 }
 
 .ques-table {
