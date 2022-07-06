@@ -166,13 +166,10 @@ header div p {
 
 .ref-sect {
   border-top:5px solid rgb(255, 162, 0);
-  width: 50%;
+  width: 100%;
   padding: 1%;
   display: flex;
-}
-
-.ref-sect>p {
- margin: 0;
+  flex-wrap: wrap;
 }
 
 .ref-sect:nth-of-type(1) {
@@ -297,6 +294,12 @@ header div p {
 
   .contents {
     margin-top: 35vh;
+  }
+
+  .ref-container {
+    flex-direction: column;
+    align-content: center;
+    row-gap: 20px;
   }
 }
 
