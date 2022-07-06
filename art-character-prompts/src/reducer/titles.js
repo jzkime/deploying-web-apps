@@ -20,3 +20,5 @@ export const SET_SKINCOLOR = 'SET_SKINCOLOR'
 export const DEC_SET = 'DEC_SET'
 export const DEC_BACK = 'DEC_BACK'
 export const DEC_MORE = 'DEC_MORE'
+
+export const SET_REF = 'SET_REF'

@@ -1,4 +1,4 @@
-import { initialCharcter, initialWant, initialAddTraits, initialDesigns, initialDecided, initialRef, initialMore } from './initial'
+import { initialCharcter, initialAddTraits, initialDesigns, initialDecided, initialRef, initialMore } from './initial'
 import 
 { RESET, SET_TYPE, SET_SPECIES, SET_GENDER, SET_ISHYBRID, SET_SECONDSPECIES,
 SET_EMOTION, SET_ELEMENT, SET_ADDITIONAL
@@ -15,13 +15,14 @@ export const characterReducer = (state = initialCharcter, action) => {
         case SET_TYPE:
             return({...state, type: action.payload});
         case SET_SPECIES:
-            return({...state, species: action.payload});
+            console.log("from character reducer", action)
+            return({...state, species: action.payload.name});
         case SET_GENDER:
             return({...state, gender: action.payload});
         case SET_ISHYBRID:
             return({...state, isHybrid: action.payload})
         case SET_SECONDSPECIES:
-            return({...state, secondSpecies: action.payload, isHybrid: false})
+            return({...state, secondSpecies: action.payload.name, isHybrid: false})
         case RESET:
             return initialCharcter
         default:
@@ -89,10 +90,20 @@ export const decideMore = (state = initialMore, action) => {
     }
 }
 
+export const referenceReducer = (state = initialRef, action) => {
+    switch(action.type) {
+        case(act.SET_REF):
+            return({...state, showRef: !state.showRef});
+        default:
+            return state
+    }
+}
+
 export default combineReducers({
     character: characterReducer, 
     moreTraits: traitReducer, 
     designs: designReducer, 
     decideDesign: decideReducer,
-    more: decideMore
+    more: decideMore,
+    ref: referenceReducer
 })

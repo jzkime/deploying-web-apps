@@ -15,7 +15,7 @@ export const handleType = () => {
 export const handleSpecies = (type) => {
   const v = ver(type)
   const sp = v[ranNum(v.length-1)]
-    return({type: SET_SPECIES, payload: type === 'hybrid' ? sp : sp.name})
+    return({type: SET_SPECIES, payload: sp})
 }
 
 export const handleSecSpec = () => {

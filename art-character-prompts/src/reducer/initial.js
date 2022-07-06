@@ -53,5 +53,5 @@ export const initialWant = {
 export const initialMore = {backMore: false, skinMore: false}
 
 export const initialRef = {
-    
-  }
+    showRef: false
+}

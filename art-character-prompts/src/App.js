@@ -5,7 +5,7 @@ import Design from './components/Design'
 import DesignButtons from './components/DesignButtons'
 import Decide from './components/Decide'
 import DecideButtons from './components/DecideButtons'
-import { initialWant, initialRef } from './reducer/initial'
+import { initialWant } from './reducer/initial'
 import SideTraits from './components/sidebar/SideTraits'
 import ContentTraits from './components/sidebar/ContentTraits'
 import TopContent from './components/topContent/TopContent';
@@ -13,8 +13,7 @@ import TopContent from './components/topContent/TopContent';
 import { connect } from 'react-redux'
 import { handleHybrid } from './reducer/actionCh'
 import { resetAll } from './reducer/reducer'
-
-let char;
+import Footer from './components/Footer/Footer';
 
 function App(props) {
   const {character, handleHybrid, resetAll} = props;
@@ -22,8 +21,6 @@ function App(props) {
 
   const [ wantMore, setWantMore ] = useState(initialWant);
   const { traitWant, designWant, decideWant } = wantMore;
-
-  const [ references, setReferences ] = useState(initialRef)
 
   useEffect(() => {
     if(type==='hybrid' && !secondSpecies) handleHybrid(true);
@@ -62,6 +59,7 @@ function App(props) {
           <Decide  />
         </div>
       </section>
+        <Footer />
     </div>
   );
 }
