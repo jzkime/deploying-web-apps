@@ -141,29 +141,42 @@ header div p {
 .ref-container {
   width: 100%;
   display: none;
-  row-gap: 20px;
   flex-wrap: wrap;
 }
 
-.ref-sect {
-  display: flex;
-  column-gap: 10px;
+.ref-container>p {
+  width: 100%;
+  text-align: center;
   padding: 2%;
-  width: 30%;
+  padding-bottom: 0; 
 }
 
-.ref-container>p {
-  padding: 2%;
+#ref-top, #ref-decide {
+  padding: 1%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 1%;
+}
+
+#ref-top>p, #ref-decide>p {
+  border-bottom: 5px solid #2a074a;
+}
+
+.ref-sect {
+  border-top:5px solid rgb(255, 162, 0);
+  width: 50%;
+  padding: 1%;
+  display: flex;
+}
+
+.ref-sect>p {
+ margin: 0;
 }
 
 .ref-sect:nth-of-type(1) {
   border: 0;
-}
-
-.ref-sect {
-  padding-left: 1%;
-  padding-right: 1%;
-  border-left:5px solid rgb(255, 162, 0);
 }
 
 .generate-buttons {

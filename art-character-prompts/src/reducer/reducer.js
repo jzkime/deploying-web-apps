@@ -15,7 +15,6 @@ export const characterReducer = (state = initialCharcter, action) => {
         case SET_TYPE:
             return({...state, type: action.payload});
         case SET_SPECIES:
-            console.log("from character reducer", action)
             return({...state, species: action.payload.name});
         case SET_GENDER:
             return({...state, gender: action.payload});
