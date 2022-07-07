@@ -68,9 +68,9 @@ export const designReducer = (state = initialDesigns, action) => {
 export const decideReducer = (state = initialDecided, action) => {
     switch(action.type) {
         case act.DEC_SET:
-            return({...state, ...action.payload})
+            return({...state, ...action.payload, smthSelected: true})
         case act.DEC_BACK:
-            return({...state, back: action.payload})
+            return({...state, ...action.payload, smthSelected: true})
         case RESET:
             return initialDecided;
         default:

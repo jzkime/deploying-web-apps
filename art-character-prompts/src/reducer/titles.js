@@ -10,6 +10,7 @@ export const SET_EMOTION = 'SET_EMOTION'
 export const SET_ELEMENT = 'SET_ELEMENT'
 export const SET_ADDITIONAL = 'SET_ADDITIONAL'
 
+export const IS_DECIDED = 'IS_DECIDED'
 export const SET_BACK = 'SET_BACK'
 export const SET_HEAD = 'SET_HEAD'
 export const SET_CLOTHES_TOP = 'SET_TOP'

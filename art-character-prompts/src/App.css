@@ -17,7 +17,6 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 20px;
   font-size: 1.3rem;
 }
 
@@ -127,8 +126,8 @@ header div p {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-bottom: 2%;
+  justify-content: center;
 }
 
 .main-content {
@@ -146,9 +145,9 @@ header div p {
 
 .ref-container>p {
   width: 100%;
-  text-align: center;
   padding: 2%;
   padding-bottom: 0; 
+  text-align: center;
 }
 
 #ref-top, #ref-decide {
@@ -166,10 +165,21 @@ header div p {
 
 .ref-sect {
   border-top:5px solid rgb(255, 162, 0);
-  width: 100%;
+  width: 70%;
   padding: 1%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.ref-sect p, .ref-sect a {
+  width: 40%;
+}
+
+.ref-sect p {
+  text-align: left;
+}
+.ref-sect a {
+  text-align: right;
 }
 
 .ref-sect:nth-of-type(1) {

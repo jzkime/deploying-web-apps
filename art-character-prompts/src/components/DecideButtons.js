@@ -2,7 +2,7 @@ import { backData, headData, colorsData, colorsBase } from "../data";
 import { connect } from "react-redux";
 import * as act from '../reducer/actionDecide'
 
-const DecideButtons = ({ decideDesign, changeDec, decBack, more, addAdj }) => {
+const DecideButtons = ({ decideDesign, changeDec, decBack, more, addAdj, setIsSelected }) => {
     const { back, head, eyeColor, skinColor, themeColor1, themeColor2 } = decideDesign;
     const { skinMore, backMore } = more;
 
@@ -19,6 +19,7 @@ const DecideButtons = ({ decideDesign, changeDec, decBack, more, addAdj }) => {
         :
         changeDec('skinColor', colorsBase)
     }
+
 
     return(
         <div className='additional-left'>

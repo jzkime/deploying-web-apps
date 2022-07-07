@@ -10,6 +10,8 @@ const TopContent = props => {
     const decideKeys = Object.keys(decideDesign)
 
     const makeDiv = (what, forThis) => {
+        if(what === 'none' || what === '?') return;
+        if(forThis === 'backAdj' || forThis === 'smthSelected') return;
         return (
             <div className="ref-sect" key={forThis}>
                 <p>{forThis}: <strong>{what}</strong></p> 
@@ -22,7 +24,7 @@ const TopContent = props => {
           <MainButtons/>
                 <button onClick={setRef}>{showRef ? 'hide' : 'show'} references</button>
             <div className={`ref-container ${props.showRef ? 'active' : ''}`}>
-                {(!species && !secondSpecies) && <p>nothing to reference yet!</p>}
+                {(!species && !props.decideDesign.smthSelected) && <p>nothing to reference yet!</p>}
                 <div id='ref-top'>
                     <p>for basic character type</p>
                     {species && makeDiv(species, 'species')}

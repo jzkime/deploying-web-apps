@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
 const Decide = ({ decideDesign }) => {
-    const { back, head, eyeColor, skinColor, clothesType, themeColor1, themeColor2} = decideDesign;
+    const {backAdj, back, head, eyeColor, skinColor, clothesType, themeColor1, themeColor2} = decideDesign;
 
     return(
         <div className='additional-right'>
-           {back && <p>back attachments: <strong>{back}</strong></p> }
+           {back && <p>back attachments: <strong>{backAdj} {back}</strong></p> }
            {head && <p>head attachments: <strong>{head}</strong></p> }
            {eyeColor && <p>eye color: <strong>{eyeColor}</strong></p> }
            {skinColor && <p>skin color: <strong>{skinColor}</strong></p> }

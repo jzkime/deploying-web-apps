@@ -35,6 +35,8 @@ export const initialDesigns = {
   }
   
 export const initialDecided = {
+    smthSelected: false,
+    backAdj: '',
     back: '',
     head: '',
     eyeColor: '',
